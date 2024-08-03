@@ -56,7 +56,56 @@ jQuery.getJSON(url,
                 x: 85,
                 text: '<p>A data model</p>'
             },
-            series: []
+            series: [
+                {
+                    type: 'treegraph',
+                    data,
+                    tooltip: {
+                        pointFormat: '{point.name}'
+                    },
+                    dataLabels: {
+                        pointFormat: '{point.name}',
+                        style: {
+                            whiteSpace: 'nowrap',
+                            color: '#000000',
+                            textOutline: '3px contrast'
+                        },
+                        crop: false
+                    },
+                    marker: {
+                        radius: 6
+                    },
+                    levels: [
+                        {
+                            level: 1,
+                            dataLabels: {
+                                align: 'left',
+                                x: 20
+                            }
+                        },
+                        {
+                            level: 2,
+                            colorByPoint: true,
+                            dataLabels: {
+                                verticalAlign: 'bottom',
+                                y: -20
+                            }
+                        },
+                        {
+                            level: 3,
+                            colorVariation: {
+                                key: 'brightness',
+                                to: -0.5
+                            },
+                            dataLabels: {
+                                verticalAlign: 'top',
+                                rotation: 0,
+                                y: 20
+                            }
+                        }
+                    ]
+                }
+            ]
         });
 
     });
