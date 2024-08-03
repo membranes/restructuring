@@ -15,8 +15,8 @@ jQuery.getJSON(url,
             de = columns.indexOf('description');
 
         // Data
-        var data = [];
-        for (var i = 0; i < source.data.length; i += 1) {
+        let data = [];
+        for (let i = 0; i < source.data.length; i += 1) {
 
             // parent, child
             data.push([
