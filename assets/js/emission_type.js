@@ -1,6 +1,6 @@
-var Highcharts;
+let Highcharts;
 
-var url = "https://raw.githubusercontent.com/preliminaries/abstracts/develop/data/emission_type.json"
+let url = "https://raw.githubusercontent.com/preliminaries/abstracts/develop/data/emission_type.json";
 
 
 // Generate curves
