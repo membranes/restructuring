@@ -4,6 +4,7 @@ let url = "https://raw.githubusercontent.com/preliminaries/abstracts/develop/dat
 
 
 // Generate curves
+// noinspection JSUnresolvedReference
 jQuery.getJSON(url,
     function (source) {
 
