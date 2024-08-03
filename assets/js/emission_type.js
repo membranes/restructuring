@@ -1,10 +1,10 @@
-let Highcharts;
 
-let url = "https://raw.githubusercontent.com/preliminaries/abstracts/develop/data/emission_type.json";
+var Highcharts;
+
+var url = "https://raw.githubusercontent.com/preliminaries/abstracts/develop/data/emission_type.json";
 
 
 // Generate curves
-// noinspection JSUnresolvedReference
 jQuery.getJSON(url,
     function (source) {
 
