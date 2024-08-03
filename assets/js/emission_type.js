@@ -60,7 +60,7 @@ jQuery.getJSON(url,
             series: [
                 {
                     type: 'treegraph',
-                    data,
+                    data: data,
                     tooltip: {
                         pointFormat: '{point.name}'
                     },
