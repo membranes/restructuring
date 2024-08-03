@@ -1,6 +1,5 @@
 
 var Highcharts;
-
 var url = "https://raw.githubusercontent.com/preliminaries/abstracts/develop/data/emission_type.json";
 
 
@@ -33,8 +32,9 @@ jQuery.getJSON(url,
         Highcharts.chart('container', {
             chart: {
                 inverted: false,
-                height: 500,
-                marginTop: 5
+                height: 600,
+                width: 450,
+                marginTop: 85
             },
             title: {
                 text: 'Proposal: Emission Source Types',
@@ -53,8 +53,8 @@ jQuery.getJSON(url,
             },
             caption: {
                 verticalAlign: "bottom",
-                y: -135,
-                x: 85,
+                y: 25,
+                x: 25,
                 text: '<p>A data model</p>'
             },
             series: [
