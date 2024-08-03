@@ -20,12 +20,12 @@ jQuery.getJSON(url,
         for (let i = 0; i < source.data.length; i += 1) {
 
             // parent, child
-            data.push([
-                source.data[i][id],
-                source.data[i][pa],
-                source.data[i][na],
-                source.data[i][de]
-            ]);
+            data.push({
+                id: source.data[i][id],
+                parent: source.data[i][pa],
+                name: source.data[i][na],
+                description: source.data[i][de]
+            });
 
         }
 
