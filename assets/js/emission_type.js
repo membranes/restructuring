@@ -47,7 +47,12 @@ jQuery.getJSON(url,
             plotOptions: {
                 treegraph: {
                     dataLabels: {
-                        enabled: true
+                        shape: 'callout',
+                        enabled: true,
+                        style: {
+                            width: 65,
+                            textOverflow: 'ellipsis'
+                        }
                         // format: '<b>{point.name}</b>: {point.description}
                     }
                 }
