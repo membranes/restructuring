@@ -48,6 +48,7 @@ jQuery.getJSON(url,
                 treegraph: {
                     dataLabels: {
                         enabled: true
+                        // format: '<b>{point.name}</b>: {point.description}
                     }
                 }
             },
@@ -81,7 +82,7 @@ jQuery.getJSON(url,
                             level: 1,
                             dataLabels: {
                                 align: 'left',
-                                x: 20
+                                x: -20
                             }
                         },
                         {
