@@ -50,6 +50,7 @@ jQuery.getJSON(url,
                         shape: 'callout',
                         enabled: true,
                         style: {
+                            whiteSpace: 'pre-wrap',
                             width: 65,
                             textOverflow: 'ellipsis'
                         }
@@ -73,7 +74,6 @@ jQuery.getJSON(url,
                     dataLabels: {
                         pointFormat: '{point.name}',
                         style: {
-                            whiteSpace: 'nowrap',
                             color: '#000000',
                             textOutline: '3px contrast'
                         },
