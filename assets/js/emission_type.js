@@ -52,7 +52,8 @@ jQuery.getJSON(url,
                         style: {
                             whiteSpace: 'pre-wrap',
                             width: 65,
-                            textOverflow: 'ellipsis'
+                            textOverflow: 'ellipsis',
+                            color: 'rgba(0,0,0,.65)'
                         }
                         // format: '<b>{point.name}</b>: {point.description}
                     }
@@ -73,10 +74,6 @@ jQuery.getJSON(url,
                     },
                     dataLabels: {
                         pointFormat: '{point.name}',
-                        style: {
-                            color: '#000000',
-                            textOutline: '3px contrast'
-                        },
                         crop: false
                     },
                     marker: {
@@ -92,6 +89,7 @@ jQuery.getJSON(url,
                         },
                         {
                             level: 2,
+                            color: '#000000',
                             colorByPoint: false,
                             dataLabels: {
                                 verticalAlign: 'bottom',
@@ -100,6 +98,7 @@ jQuery.getJSON(url,
                         },
                         {
                             level: 3,
+                            color: 'rgba(0,0,0,.45)',
                             collapsed: true,
                             colorVariation: {
                                 key: 'brightness',
