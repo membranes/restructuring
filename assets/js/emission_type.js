@@ -53,7 +53,7 @@ jQuery.getJSON(url,
                             whiteSpace: 'pre-wrap',
                             width: 65,
                             textOverflow: 'ellipsis',
-                            color: 'rgba(0,0,0,.65)'
+                            color: 'rgba(0, 0, 0, .65)'
                         }
                         // format: '<b>{point.name}</b>: {point.description}
                     }
@@ -82,6 +82,7 @@ jQuery.getJSON(url,
                     levels: [
                         {
                             level: 1,
+                            color: 'rgba(0, 0, 0, .95)',
                             dataLabels: {
                                 align: 'left',
                                 x: -20
@@ -89,7 +90,7 @@ jQuery.getJSON(url,
                         },
                         {
                             level: 2,
-                            color: '#000000',
+                            color: 'rgba(0, 0, 0, .80)',
                             colorByPoint: false,
                             dataLabels: {
                                 verticalAlign: 'bottom',
@@ -98,7 +99,7 @@ jQuery.getJSON(url,
                         },
                         {
                             level: 3,
-                            color: 'rgba(0,0,0,.45)',
+                            color: 'rgba(0, 0, 0, .45)',
                             collapsed: true,
                             colorVariation: {
                                 key: 'brightness',
