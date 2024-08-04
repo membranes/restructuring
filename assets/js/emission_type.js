@@ -100,6 +100,7 @@ jQuery.getJSON(url,
                         },
                         {
                             level: 3,
+                            collapsed: true,
                             colorVariation: {
                                 key: 'brightness',
                                 to: -0.5
