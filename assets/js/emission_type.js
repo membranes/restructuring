@@ -64,7 +64,7 @@ jQuery.getJSON(url,
                 verticalAlign: "bottom",
                 y: 25,
                 x: 25,
-                text: '<p>A data model</p>'
+                text: '<p>Dimension elements; in progress.</p>'
             },
             series: [
                 {
