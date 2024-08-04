@@ -33,8 +33,9 @@ jQuery.getJSON(url,
             chart: {
                 inverted: false,
                 height: 600,
-                width: 450,
-                marginTop: 85
+                width: 550,
+                marginTop: 85,
+                marginLeft: 85
             },
             title: {
                 text: 'Proposal: Emission Source Types',
@@ -85,7 +86,9 @@ jQuery.getJSON(url,
                             color: 'rgba(0, 0, 0, .95)',
                             dataLabels: {
                                 align: 'left',
-                                x: -20
+                                verticalAlign: 'bottom',
+                                x: -5,
+                                y: 13.5
                             }
                         },
                         {
