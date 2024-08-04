@@ -92,10 +92,10 @@ jQuery.getJSON(url,
                         },
                         {
                             level: 2,
-                            colorByPoint: true,
+                            colorByPoint: false,
                             dataLabels: {
                                 verticalAlign: 'bottom',
-                                y: -20
+                                y: 13.5
                             }
                         },
                         {
@@ -105,9 +105,9 @@ jQuery.getJSON(url,
                                 to: -0.5
                             },
                             dataLabels: {
-                                verticalAlign: 'top',
+                                verticalAlign: 'bottom',
                                 rotation: 0,
-                                y: 20
+                                y: 13.5
                             }
                         }
                     ]
