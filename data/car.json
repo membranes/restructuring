@@ -1,0 +1,16 @@
+{
+  "index": [
+    0, 1, 2, 3, 4, 5
+  ],
+  "columns": [
+    "id", "parent", "name", "description"
+  ],
+  "data": [
+    ["0", "", "car energy source", "Car"],
+    ["5111", "0", "diesel", "Diesel Oil"],
+    ["5112", "0", "electricity", "Electricity"],
+    ["5113", "0", "hybrid", "Hybrid"],
+    ["5114", "0", "unknown", "Unknown"],
+    ["5115", "0", "unleaded petrol", "Unleaded Petrol"]
+  ]
+}
