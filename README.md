@@ -6,6 +6,7 @@ Jekyll
 * [jekyll](https://jekyllrb.com)
 * [liquid](https://shopify.github.io/liquid/)
 * [LiquidJS](https://liquidjs.com/index.html)
+* [mermaid](https://mermaid.js.org/config/usage.html)
 
 Google Charts
 * [word tree](https://developers.google.com/chart/interactive/docs/gallery/wordtree)
