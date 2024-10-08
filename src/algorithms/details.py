@@ -7,6 +7,7 @@ import config
 
 import src.elements.text_attributes
 import src.functions.streams
+import src.functions.objects
 
 
 class Details:
@@ -38,6 +39,19 @@ class Details:
 
         return src.functions.streams.Streams().read(text=text)
 
+    def __persist(self, blob: pd.DataFrame, name: str) -> str:
+        """
+
+        :param blob:
+        :param name:
+        :return:
+        """
+
+        # Save
+        return src.functions.objects.Objects().write(
+            nodes=blob.to_dict(orient='tight'),
+            path=os.path.join(self.__configurations.warehouse, f'{name}.json'))
+
     def exc(self):
         """
 
@@ -49,4 +63,5 @@ class Details:
         self.__logger.info(data.head())
 
         # Dictionary
-        self.__logger.info(data.to_dict(orient='tight'))
+        message = self.__persist(blob=data, name='details')
+        self.__logger.info(message)
