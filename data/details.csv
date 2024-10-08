@@ -38,3 +38,8 @@
 "Maintainability & Resilience","maintainability-resilience","System Attributes","system","Maintainability & Resilience"
 "Availability","availability","System Attributes","system","Availability"
 "Cost","cost","Details","details","The overarching costs, which must account for ongoing costs."
+"Project Constraints","constraints","Details","details","Project Constraints"
+"Implementation & Environment","implementation-environment","Project Constraints","constraints","Implementation & Environment"
+"Solution","solution","Project Constraints","constraints","Solution"
+"Budget","budget","Project Constraints","constraints","Budget"
+"Time","time","Project Constraints","constraints","Time"
