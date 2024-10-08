@@ -37,3 +37,4 @@
 "Reliability","reliability","System Attributes","system","“ … the probability of a product performing its intended function under stated conditions without failure for a given time period”"
 "Maintainability & Resilience","maintainability-resilience","System Attributes","system","Maintainability & Resilience"
 "Availability","availability","System Attributes","system","Availability"
+"Cost","cost","Details","details","The overarching costs, which must account for ongoing costs."
