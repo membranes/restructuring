@@ -1,0 +1,35 @@
+{
+  "index": [
+    0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24
+  ],
+  "columns": [
+    "id", "parent", "name", "description"
+  ],
+  "data": [
+    ["0", "", "emission type", "The emission type of an emission source"],
+    ["8144", "0", "Bioenergy", "Bioenergy"],
+    ["8136", "0", "Electricity", "Electricity"],
+    ["8137", "0", "Fuels", "Fuels"],
+    ["8145", "0", "Heat & Steam", "Heat & Steam"],
+    ["8147", "0", "Homeworking", "Working from home."],
+    ["8148", "0", "Hotel Stay", "Hotel Stay"],
+    ["8146", "0", "Material Use", "The use of raw materials."],
+    ["8150", "0", "Process", "Unknown"],
+    ["8139", "0", "Refrigerants", "Refrigerants"],
+    ["8149", "0", "Renewables", "Renewables"],
+    ["8152", "0", "Transport", "Transport"],
+    ["8142", "8152", "Public", "Public Transport"],
+    ["8155", "8142", "Tram", "Also known as light rail."],
+    ["8156", "8142", "Train", "Passenger Trains"],
+    ["8157", "8142", "Underground System", "A rapid transit system also known as subway, metro, etc."],
+    ["8158", "8142", "Buses", "Buses"],
+    ["8159", "8142", "Airplane", "Airplane"],
+    ["8153", "8152", "Commercial", "Commercial Transport"],
+    ["8143", "8153", "Van/Heavy Goods Vehicle", "Van/Heavy Goods Vehicle"],
+    ["8154", "8152", "Private", "Private Transport"],
+    ["8141", "8154", "Car", "Any type of private car."],
+    ["8140", "0", "Waste", "Waste"],
+    ["8138", "0", "Water", "Water"],
+    ["8151", "0", "Other", "Other"]
+  ]
+}
