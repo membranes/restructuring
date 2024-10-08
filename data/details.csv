@@ -26,3 +26,5 @@
 "Confidentiality, Sensitivity, Anonymity","protections","Data Features","features","Confidentiality, Sensitivity, Anonymity"
 "Distressing Elements","distress","Data Features","features","Does the data include distressing elements?"
 "Data Costs","data_costs","Data & Datasheet","data","Data Costs"
+"Stakeholders","stakeholders","Details","details","Stakeholders"
+"Functional Requirements","functional","Details","details","A functional requirement specifies what a deployed system must do.  The deployment goal dictates what the system will be, and the functional requirements thereof."
