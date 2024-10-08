@@ -25,6 +25,12 @@
 "Anomalies","anomalies","Data Features","features","Any machine-readability issues, data errors, etc."
 "Confidentiality, Sensitivity, Anonymity","protections","Data Features","features","Confidentiality, Sensitivity, Anonymity"
 "Distressing Elements","distress","Data Features","features","Does the data include distressing elements?"
-"Data Costs","data_costs","Data & Datasheet","data","Data Costs"
+"Data Costs","data-costs","Data & Datasheet","data","Data Costs"
 "Stakeholders","stakeholders","Details","details","Stakeholders"
 "Functional Requirements","functional","Details","details","A functional requirement specifies what a deployed system must do.  The deployment goal dictates what the system will be, and the functional requirements thereof."
+"Non-functional Requirements","non-functional","Details","details","Non-functional Requirements"
+"System Security","security","Non-functional Requirements","non-functional","Including (a) activity tracking, (b) a system protection & privacy layer that ascertains legal & regulatory compliance, privacy, etc., (c) authentication & authorisation systems, and more. "
+"Architectures","architectures","Non-functional Requirements","non-functional","Architectures"
+"Usability & Accessibility","interface","Non-functional Requirements","non-functional","Usability & Accessibility"
+"Performance & Scalability","Performance-scalability","Non-functional Requirements","non-functional","Performance & Scalability"
+"System Attributes","system","Non-functional Requirements","non-functional",
