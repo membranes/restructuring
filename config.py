@@ -12,5 +12,8 @@ class Config:
         Constructor
         """
 
+        # The raw data store
         self.data = os.path.join(os.getcwd(), 'data')
+
+        # The warehouse; for the outputs.
         self.warehouse = os.path.join(os.getcwd(), 'warehouse')
