@@ -25,3 +25,4 @@
 "Anomalies","anomalies","Data Features","features","Any machine-readability issues, data errors, etc."
 "Confidentiality, Sensitivity, Anonymity","protections","Data Features","features","Confidentiality, Sensitivity, Anonymity"
 "Distressing Elements","distress","Data Features","features","Does the data include distressing elements?"
+"Data Costs","data_costs","Data & Datasheet","data","Data Costs"
