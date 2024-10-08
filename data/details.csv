@@ -19,7 +19,7 @@
 "Provenance","provenance","Natural Language Processing","nlp","Which must note whether the data was derived from another"
 "Pertinent Language Features","pertinent","Natural Language Processing","nlp","Additional language features that might impact the effectiveness of natural language processing algorithms."
 "Data Features","features","Data & Datasheet","data","Data Features"
-"Profiles","profiles","Data Features","features",
+"Data Profile","profiles","Data Features","features","A data characteristics summary for assessing data set quality."
 "Sampling","sampling","Data Features","features","Is the data set a sample of a larger data set?"
 "Data Lineage","lineage","Data Features","features","Data Lineage"
 "Anomalies","anomalies","Data Features","features","Any machine-readability issues, data errors, etc."
