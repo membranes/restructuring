@@ -1,0 +1,4 @@
+"child_desc","id","parent_desc","parent","notes"
+"Critical Preliminaries","preliminaries","Details","details","What is the problem, why solve it, and what are the functional and deployment expectations. "
+"Problem Statement","problem","Critical Preliminaries","preliminaries","What is the problem, and why is it important to solve this problem?"
+"Outcome Expectations/Underlying Aims","expectations","Critical Preliminaries","preliminaries","What are the potential systems' outcome expectations, and underlying aims?"
