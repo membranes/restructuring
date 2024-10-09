@@ -5,6 +5,7 @@ import os
 
 import dask.dataframe as dfr
 import pandas as pd
+import numpy as np
 
 import config
 import src.functions.streams
@@ -76,6 +77,18 @@ class Tags:
 
         items = [[k, frequencies[k], definitions[k]] for k, v in frequencies.items()]
         frame = pd.DataFrame(data=items, columns=['tag', 'frequency', 'name'])
-        frame = frame.copy().merge(tags[['tag', 'category']], on='tag', how='left')
-        frame.rename(columns={'tag': 'id', 'category': 'parent', 'frequency': 'value'}, inplace=True)
+        frame = frame.copy().merge(tags[['tag', 'parent']], on='tag', how='left')
+        frame.rename(columns={'tag': 'id', 'frequency': 'value'}, inplace=True)
         self.__logger.info(frame)
+
+        categories: pd.DataFrame = categories.copy().loc[categories['category'] != 'O', :]
+        categories['value'] = np.nan
+        categories.rename(columns={'category': 'id'}, inplace=True)
+        self.__logger.info(categories)
+
+        self.__logger.info(pd.concat((frame, categories)).to_dict('records'))
+
+
+
+
+
