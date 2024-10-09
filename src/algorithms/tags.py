@@ -125,4 +125,4 @@ class Tags:
         addendum = self.__addendum()
 
         bursts = pd.concat((frequencies, addendum))
-        self.__persist(blob=bursts, name='bursts.json')
+        self.__persist(blob=bursts, name='tags.json')
