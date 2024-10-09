@@ -1,6 +1,6 @@
 """Module interface.py"""
 import src.algorithms.networks
-
+import src.algorithms.tags
 
 class Interface:
     """
@@ -25,3 +25,6 @@ class Interface:
 
         for network in networks:
             self.__networks.exc(filename_stem=network)
+
+        # Bursts
+        src.algorithms.tags.Tags().exc()
