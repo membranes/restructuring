@@ -5,7 +5,6 @@ import logging
 import os
 
 import dask.dataframe as dfr
-import numpy as np
 import pandas as pd
 
 import config
@@ -24,10 +23,8 @@ class Tags:
         Constructor
         """
 
+        # Instances
         self.__configurations = config.Config()
-        self.__uri = os.path.join(self.__configurations.data, 'data.csv')
-
-        # References
         self.__streams = src.functions.streams.Streams()
 
     def __data(self) -> pd.DataFrame:
@@ -37,7 +34,8 @@ class Tags:
         """
 
         try:
-            data: dfr.DataFrame = dfr.read_csv(path=self.__uri, header=0)
+            data: dfr.DataFrame = dfr.read_csv(
+                path=os.path.join(self.__configurations.data, 'data.csv'), header=0)
         except ImportError as err:
             raise err from err
 
@@ -50,8 +48,8 @@ class Tags:
         :return:
         """
 
-        uri = os.path.join(self.__configurations.data, pathstr)
-        text = src.elements.text_attributes.TextAttributes(uri=uri, header=0)
+        text = src.elements.text_attributes.TextAttributes(
+            uri=os.path.join(self.__configurations.data, pathstr), header=0)
 
         return self.__streams.read(text=text)
 
@@ -123,6 +121,6 @@ class Tags:
         data = self.__data()
         frequencies = self.__frequencies(data=data)
         addendum = self.__addendum()
+        frame = pd.concat((frequencies, addendum))
 
-        bursts = pd.concat((frequencies, addendum))
-        self.__persist(blob=bursts, name='tags.json')
+        self.__persist(blob=frame, name='tags.json')
