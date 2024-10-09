@@ -14,7 +14,8 @@ def main():
     logger.info('Abstracts')
 
     # Of interest
-    src.algorithms.interface.Interface().exc()
+    # src.algorithms.interface.Interface().exc()
+    src.algorithms.tags.Tags().exc()
 
     # Deleting __pycache__
     src.functions.cache.Cache().exc()
@@ -36,6 +37,7 @@ if __name__ == '__main__':
     import src.functions.cache
     import src.functions.directories
     import src.algorithms.interface
+    import src.algorithms.tags
 
     warehouse = config.Config().warehouse
     directories = src.functions.directories.Directories()
