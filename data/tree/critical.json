@@ -1,0 +1,14 @@
+{
+  "index": [
+    0, 1, 2, 3
+  ],
+  "columns": [
+    "id", "parent", "name", "description"
+  ],
+  "data": [
+    ["0", "", "critical", "Critical Preliminaries"],
+    ["7", "0", "Problem Statement", "The time-consuming, costly, repetitive, and error-prone redaction of documents; a necessary, but currently manual, activity."],
+    ["8", "0", "Expectations", "The reduction of redaction <a href='https://desklog.io/blog/time-cost/' target='_blank'>time costs</a>.  Approximately real-time availability of redacted case documents."],
+    ["9", "0", "Deployment Goal", "<a href='https://github.com/prml-0004/library/blob/master/src/01-critical/03-deployment.md'>Deployment Goal</a>"]
+  ]
+}
