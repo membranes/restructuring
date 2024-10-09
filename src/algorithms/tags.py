@@ -58,3 +58,12 @@ class Tags:
         self.__logger.info(data.head())
         self.__logger.info(occurrences)
         self.__logger.info(frequencies)
+
+        # Definitions
+        definitions = self.__configurations.definitions
+
+        items = [[k, frequencies[k], definitions[k]] for k, v in frequencies.items()]
+        self.__logger.info(items)
+
+        frame = pd.DataFrame(data=items, columns=['tag', 'frequency', 'name'])
+        self.__logger.info(frame)
