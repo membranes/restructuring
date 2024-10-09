@@ -7,6 +7,8 @@ import dask.dataframe as dfr
 import pandas as pd
 
 import config
+import src.functions.streams
+import src.elements.text_attributes
 
 
 class Tags:
@@ -22,6 +24,9 @@ class Tags:
         self.__configurations = config.Config()
 
         self.__uri = os.path.join(self.__configurations.data, 'data.csv')
+
+        # References
+        self.__streams = src.functions.streams.Streams()
 
         # Logging
         logging.basicConfig(level=logging.INFO,
@@ -42,28 +47,35 @@ class Tags:
 
         return data.compute()
 
+    def __references(self, pathstr: str):
+
+        uri = os.path.join(self.__configurations.data, pathstr)
+        text = src.elements.text_attributes.TextAttributes(uri=uri, header=0)
+
+        return self.__streams.read(text=text)
+
     def exc(self):
         """
+        data['tagstr'].str.split(pat=',', n=-1, expand=False).map(collections.Counter)
 
         :return:
         """
 
         # The data
         data = self.__data()
-
-        # The frequencies of the tags, by sentence and overarching
-        occurrences = data['tagstr'].str.split(pat=',', n=-1, expand=False).map(collections.Counter)
-        frequencies = data['tagstr'].str.split(pat=',', n=-1, expand=False).map(collections.Counter).sum()
-
-        self.__logger.info(data.head())
-        self.__logger.info(occurrences)
-        self.__logger.info(frequencies)
+        tags = self.__references(pathstr='tags.csv')
+        categories = self.__references(pathstr='categories.csv')
 
         # Definitions
-        definitions = self.__configurations.definitions
+        definitions = tags[['tag', 'name']].set_index('tag').to_dict()['name']
+
+        # The frequencies
+        frequencies = data['tagstr'].str.split(pat=',', n=-1, expand=False).map(collections.Counter).sum()
+
+
 
         items = [[k, frequencies[k], definitions[k]] for k, v in frequencies.items()]
-        self.__logger.info(items)
-
         frame = pd.DataFrame(data=items, columns=['tag', 'frequency', 'name'])
+        frame = frame.copy().merge(tags[['tag', 'category']], on='tag', how='left')
+        frame.rename(columns={'tag': 'id', 'category': 'parent', 'frequency': 'value'}, inplace=True)
         self.__logger.info(frame)
