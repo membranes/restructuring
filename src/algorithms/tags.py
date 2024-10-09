@@ -89,7 +89,7 @@ class Tags:
         categories: pd.DataFrame = categories.copy().loc[categories['category'] != 'O', :]
 
         # Set all values to Null/NaN
-        categories['value'] = np.nan
+        categories['value'] = None
         categories.rename(columns={'category': 'id'}, inplace=True)
 
         return categories
