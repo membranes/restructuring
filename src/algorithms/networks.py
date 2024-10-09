@@ -1,3 +1,4 @@
+"""Module networks.py"""
 import logging
 import os
 
@@ -10,6 +11,9 @@ import src.functions.streams
 
 
 class Networks:
+    """
+    Prepares data structures for network graphs
+    """
 
     def __init__(self):
         """
@@ -29,6 +33,7 @@ class Networks:
     def __read(uri: str) -> pd.DataFrame:
         """
 
+        :param uri: The path & file name string of the source data file
         :return:
         """
 
@@ -36,22 +41,23 @@ class Networks:
 
         return src.functions.streams.Streams().read(text=text)
 
-    def __persist(self, blob: pd.DataFrame, name: str) -> str:
+    def __persist(self, blob: pd.DataFrame, filename_stem: str) -> str:
         """
 
-        :param blob:
-        :param name:
+        :param blob: The data being saved as structurally required
+        :param filename_stem: The name of the file name's stem
         :return:
         """
 
         # Save
         return src.functions.objects.Objects().write(
             nodes=blob.to_dict(orient='tight'),
-            path=os.path.join(self.__configurations.warehouse, f'{name}.json'))
+            path=os.path.join(self.__configurations.warehouse, f'{filename_stem}.json'))
 
     def exc(self, filename_stem: str):
         """
 
+        :param filename_stem:
         :return:
         """
 
@@ -63,5 +69,5 @@ class Networks:
         self.__logger.info(data.head())
 
         # Dictionary
-        message = self.__persist(blob=data, name=filename_stem)
+        message = self.__persist(blob=data, filename_stem=filename_stem)
         self.__logger.info(message)
