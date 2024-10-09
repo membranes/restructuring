@@ -22,9 +22,8 @@ class Interface:
 
         # Network Graphs
         networks = ['classes', 'details']
-
         for network in networks:
             self.__networks.exc(filename_stem=network)
 
-        # Bursts
+        # Burst of tags.
         src.algorithms.tags.Tags().exc()
