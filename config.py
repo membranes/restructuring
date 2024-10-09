@@ -13,15 +13,7 @@ class Config:
         """
 
         # The raw data store
-        self.data = os.path.join(os.getcwd(), 'data')
+        self.data = os.path.join(os.getcwd(), 'data', 'text')
 
         # The warehouse; for the outputs.
         self.warehouse = os.path.join(os.getcwd(), 'warehouse')
-
-        self.definitions = {'O': 'Miscellaneous',
-                            'B-geo': 'Beginning | Geographic Point', 'B-tim': 'Beginning | Time',
-                            'B-org': 'Beginning | Organisation', 'B-per': 'Beginning | Person',
-                            'B-gpe': 'Beginning | Geopolitical Entity',
-                            'I-geo': 'Inside | Geographic Point', 'I-tim': 'Inside | Time',
-                            'I-org': 'Inside | Organisation', 'I-per': 'Inside | Person',
-                            'I-gpe': 'Inside | Geopolitical Entity'}
