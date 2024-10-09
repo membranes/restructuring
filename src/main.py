@@ -14,8 +14,7 @@ def main():
     logger.info('Abstracts')
 
     # Of interest
-    # src.algorithms.interface.Interface().exc()
-    src.algorithms.tags.Tags().exc()
+    src.algorithms.interface.Interface().exc()
 
     # Deleting __pycache__
     src.functions.cache.Cache().exc()
