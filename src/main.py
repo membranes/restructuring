@@ -36,7 +36,6 @@ if __name__ == '__main__':
     import src.functions.cache
     import src.functions.directories
     import src.algorithms.interface
-    import src.algorithms.tags
 
     warehouse = config.Config().warehouse
     directories = src.functions.directories.Directories()
