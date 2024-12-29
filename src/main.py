@@ -11,7 +11,7 @@ def main():
 
     # Logging
     logger: logging.Logger = logging.getLogger(__name__)
-    logger.info('Abstracts')
+    logger.info('Restructuring')
 
     # Of interest
     src.algorithms.interface.Interface().exc()
