@@ -13,9 +13,6 @@ def main():
     logger: logging.Logger = logging.getLogger(__name__)
     logger.info('Restructuring')
 
-    # Of interest
-    src.algorithms.interface.Interface().exc()
-
     # Deleting __pycache__
     src.functions.cache.Cache().exc()
 
@@ -34,12 +31,5 @@ if __name__ == '__main__':
     # Classes
     import config
     import src.functions.cache
-    import src.functions.directories
-    import src.algorithms.interface
-
-    warehouse = config.Config().warehouse
-    directories = src.functions.directories.Directories()
-    directories.cleanup(path=warehouse)
-    directories.create(path=warehouse)
-
+    
     main()
