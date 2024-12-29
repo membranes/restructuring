@@ -11,10 +11,7 @@ def main():
 
     # Logging
     logger: logging.Logger = logging.getLogger(__name__)
-    logger.info('Abstracts')
-
-    # Of interest
-    src.algorithms.interface.Interface().exc()
+    logger.info('Restructuring')
 
     # Deleting __pycache__
     src.functions.cache.Cache().exc()
@@ -32,14 +29,6 @@ if __name__ == '__main__':
                         datefmt='%Y-%m-%d %H:%M:%S')
 
     # Classes
-    import config
     import src.functions.cache
-    import src.functions.directories
-    import src.algorithms.interface
-
-    warehouse = config.Config().warehouse
-    directories = src.functions.directories.Directories()
-    directories.cleanup(path=warehouse)
-    directories.create(path=warehouse)
 
     main()

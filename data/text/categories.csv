@@ -1,7 +1,0 @@
-category,name,parent
-O,Miscellaneous,all
-geo,Geographic Point,all
-gpe,Geopolitical Entity,all
-tim,Time,all
-org,Organisation,all
-per,Person,all
