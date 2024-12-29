@@ -21,7 +21,7 @@ class Interface:
         """
 
         # Network Graphs
-        networks = ['classes', 'details']
+        networks = ['details']
         for network in networks:
             self.__networks.exc(filename_stem=network)
 
