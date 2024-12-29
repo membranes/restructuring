@@ -13,7 +13,7 @@ class Config:
         """
 
         # The raw data store
-        self.data = os.path.join(os.getcwd(), 'data', 'text')
+        self.data_ = os.path.join(os.getcwd(), 'data')
 
         # The warehouse; for the outputs.
         self.warehouse = os.path.join(os.getcwd(), 'warehouse')
