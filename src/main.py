@@ -29,7 +29,6 @@ if __name__ == '__main__':
                         datefmt='%Y-%m-%d %H:%M:%S')
 
     # Classes
-    import config
     import src.functions.cache
-    
+
     main()
