@@ -12,7 +12,7 @@ For this Python project/template, the remote development environment requires
 An image is built via the command
 
 ```shell
-docker build . --file .devcontainer/Dockerfile -t fundamentals
+docker build . --file .devcontainer/Dockerfile -t points
 ```
 
 On success, the output of
@@ -27,18 +27,18 @@ should include
 
 | repository | tag    | image id | created  | size     |
 |:-----------|:-------|:---------|:---------|:---------|
-| fundamentals     | latest | $\ldots$ | $\ldots$ | $\ldots$ |
+| points     | latest | $\ldots$ | $\ldots$ | $\ldots$ |
 
 
 <br>
 
-Subsequently, run a container, i.e., an instance, of the image `fundamentals` via:
+Subsequently, run a container, i.e., an instance, of the image `points` via:
 
 <br>
 
 ```shell
 docker run --rm -i -t -p 8050:8050 -w /app 
-	--mount type=bind,src="$(pwd)",target=/app fundamentals
+	--mount type=bind,src="$(pwd)",target=/app points
 ```
 
 <br>
@@ -52,7 +52,7 @@ Herein, `-p 8050:8050` maps the host port `8050` to container port `8050`.  Note
 
 <br>
 
-The part `-v ~/.aws:/root/.aws` ascertains Amazon Web Services interactions via remote development, i.e., via containers.  Get the name of the running instance of ``fundamentals`` via:
+The part `-v ~/.aws:/root/.aws` ascertains Amazon Web Services interactions via remote development, i.e., via containers.  Get the name of the running instance of ``points`` via:
 
 ```shell
 docker ps --all
@@ -139,35 +139,6 @@ python -m flake8 --count --exit-zero --max-complexity=10 --max-line-length=127 -
 ```
 
 inspects complexity.
-
-
-<br>
-<br>
-
-
-## References
-
-Jekyll
-* [jekyll](https://jekyllrb.com)
-* [liquid](https://shopify.github.io/liquid/)
-* [LiquidJS](https://liquidjs.com/index.html)
-* [mermaid](https://mermaid.js.org/config/usage.html)
-
-Google Charts
-* [word tree](https://developers.google.com/chart/interactive/docs/gallery/wordtree)
-
-HighCharts
-* [treegraph](https://www.highcharts.com/demo/highcharts/treegraph-inverted)
-* [treegraph discussion](https://www.highcharts.com/docs/chart-and-series-types/treegraph-chart)
-* [points & keys](https://jsfiddle.net/gh/get/library/pure/highcharts/highcharts/tree/master/samples/highcharts/series/data-keys/)
-
-Data Label Style
-* [A brief description of data label style](https://api.highcharts.com/highcharts/plotOptions.treegraph.levels.dataLabels.style)
-* [The cascading style sheet (CSS) object of data label style](https://api.highcharts.com/class-reference/Highcharts.CSSObject)
-* [Labels & Wrapping](https://developer.mozilla.org/en-US/docs/Web/CSS/white-space)
-
-<br>
-<br>
 
 <br>
 <br>
